@@ -16,4 +16,7 @@ body{
 
 #container img{
     float: left;
+    cursor: move;
+    width: 100px;
+    height: 100px;
 }
