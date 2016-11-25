@@ -128,12 +128,13 @@
                     targetB = target.offsetTop + target.offsetHeight,
                     targetT = target.offsetTop,
                     targetL = target.offsetLeft;
-                if (elemR < targetL || elemB < targetT || elemL > targetR || elemT > targetB) {
-//                    没碰撞
-                    return false;
-                } else {
-                    return true;
-                }
+//                if (elemR < targetL || elemB < targetT || elemL > targetR || elemT > targetB) {
+////                    没碰撞
+//                    return false;
+//                } else {
+//                    return true;
+//                }
+                return ! (elemR < targetL || elemB<targetT || elemL > targetR || elemT >targetB);
             }
 
             /*
