@@ -54,14 +54,14 @@ window.onload = function () {
                 document.onmouseup = function () {
                     document.onmousemove = null;
                     if (nearElem) {
-                        animate(elem,nearElem.pos);
-                        animate(nearElem,elem.pos);
+                        animate(elem, nearElem.pos);
+                        animate(nearElem, elem.pos);
                         var tmpPos = elem.pos;
                         elem.pos = nearElem.pos;
                         nearElem.pos = tmpPos;
                         nearElem = null;
-                    }else {
-                        animate(elem,elem.pos);
+                    } else {
+                        animate(elem, elem.pos);
                     }
 
                 };
@@ -88,7 +88,7 @@ window.onload = function () {
                 var x = collide[i].offsetTop - elem.offsetTop;
                 var y = collide[i].offsetLeft - elem.offsetLeft;
                 var iDis = Math.sqrt(x * x + y * y);
-                if (iDis<minDis){
+                if (iDis < minDis) {
                     minDis = iDis;
                     index = i;
                 }
@@ -97,12 +97,16 @@ window.onload = function () {
         }
 
         function random() {
-            var arr = [1,2,3,4,5,6,7,8,9];
-            arr.sort(function () {
-                return Math.random() -0.5;
+            var aImage = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+            var aSource = [1, 2, 3,4,5,6,7,8,9,10];
+            aImage.sort(function () {
+                return Math.random() - 0.5;
             });
-            for(var i=0;i<aImg.length;i++){
-                aImg[i].src = 'img/1/'+arr[i]+'.png';
+            aSource.sort(function () {
+                return Math.random() - 0.5;
+            });
+            for (var i = 0; i < aImg.length; i++) {
+                aImg[i].src = 'img/'+aSource[5]+'_0' + aImage[i] + '.png';
             }
         }
 
