@@ -102,7 +102,7 @@ window.onload = function () {
 
         function random() {  //随机图片
             var aImage = [1, 2, 3, 4, 5, 6, 7, 8, 9];
-            var aSource = [1, 2, 3,4,5,6,7,8,9,10];
+            var aSource = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
             aImage.sort(function () {
                 return Math.random() - 0.5;
             });
@@ -110,26 +110,26 @@ window.onload = function () {
                 return Math.random() - 0.5;
             });
             for (var i = 0; i < aImg.length; i++) {
-                aImg[i].src = 'img/'+aSource[5]+'_0' + aImage[i] + '.png';
+                aImg[i].src = 'img/' + aSource[5] + '_0' + aImage[i] + '.png';
             }
             oNum.innerHTML = aSource[5].toString();
-            oKeyImg.src = 'img/'+aSource[5]+'_00.jpg';
+            oKeyImg.src = 'img/' + aSource[5] + '_00.jpg';
         }
 
         random();
 
         oBtn.onclick = function () {
             random();
-            if (bKey){
+            if (bKey) {
                 oKey.onclick();
             }
         };
 
         oKey.onclick = function () {
-            if (bKey){
+            if (bKey) {
                 oKeyImg.style.display = 'none';
                 oKey.innerHTML = '答案';
-            }else {
+            } else {
                 oKeyImg.style.display = 'block';
                 oKey.innerHTML = '隐藏';
             }
