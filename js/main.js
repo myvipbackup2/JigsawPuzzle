@@ -118,7 +118,12 @@ window.onload = function () {
 
         random();
 
-        oBtn.onclick = random;
+        oBtn.onclick = function () {
+            random();
+            if (bKey){
+                oKey.onclick();
+            }
+        };
 
         oKey.onclick = function () {
             if (bKey){
