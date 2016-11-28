@@ -1,7 +1,7 @@
 # JigsawPuzzle
 ###一个拼图小DEMO
 
-<iframe height=300 width=300 src="img/1_01.png">
+<iframe height=664 width=585 src="https://github.com/myvipbackup2/JigsawPuzzle/blob/master/test.gif">
 
 
 
