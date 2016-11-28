@@ -4,6 +4,7 @@ window.onload = function () {
         var oContainer = document.getElementById('container');
         var aImg = oContainer.getElementsByTagName('img');
         var oBtn = document.getElementById('btn');
+        var oNum = document.getElementById('num');
         var zIndex = 1;
         var collide = [];
         var nearElem = null;
@@ -108,6 +109,7 @@ window.onload = function () {
             for (var i = 0; i < aImg.length; i++) {
                 aImg[i].src = 'img/'+aSource[5]+'_0' + aImage[i] + '.png';
             }
+            oNum.innerHTML = aSource[5].toString();
         }
 
         random();
