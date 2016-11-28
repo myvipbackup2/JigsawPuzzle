@@ -3,6 +3,7 @@ window.onload = function () {
 
         var oContainer = document.getElementById('container');
         var aImg = oContainer.getElementsByTagName('img');
+        var oBtn = document.getElementById('btn');
         var zIndex = 1;
         var collide = [];
         var nearElem = null;
@@ -68,7 +69,6 @@ window.onload = function () {
 
         }
 
-
         function checkCollide(elem, target) {
             var elemR = elem.offsetLeft + elem.offsetWidth,
                 elemB = elem.offsetTop + elem.offsetHeight,
@@ -95,6 +95,20 @@ window.onload = function () {
             }
             return collide[index];
         }
+
+        function random() {
+            var arr = [1,2,3,4,5,6,7,8,9];
+            arr.sort(function (a, b) {
+                return Math.random() -0.5;
+            });
+            for(var i=0;i<aImg.length;i++){
+                aImg[i].src = 'img/1/'+arr[i]+'.png';
+            }
+        }
+
+        random();
+
+        oBtn.onclick = random;
 
     })();
 };
