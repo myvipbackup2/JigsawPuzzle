@@ -5,6 +5,9 @@ window.onload = function () {
         var aImg = oContainer.getElementsByTagName('img');
         var oBtn = document.getElementById('btn');
         var oNum = document.getElementById('num');
+        var oKey = document.getElementById('key');
+        var bKey = false;  //用于切换答案开关
+        var oKeyImg = document.getElementById('keyImg');
         var zIndex = 1;
         var collide = [];
         var nearElem = null;
@@ -97,7 +100,7 @@ window.onload = function () {
             return collide[index];
         }
 
-        function random() {
+        function random() {  //随机图片
             var aImage = [1, 2, 3, 4, 5, 6, 7, 8, 9];
             var aSource = [1, 2, 3,4,5,6,7,8,9,10];
             aImage.sort(function () {
@@ -110,11 +113,24 @@ window.onload = function () {
                 aImg[i].src = 'img/'+aSource[5]+'_0' + aImage[i] + '.png';
             }
             oNum.innerHTML = aSource[5].toString();
+            oKeyImg.src = 'img/'+aSource[5]+'_00.jpg';
         }
 
         random();
 
         oBtn.onclick = random;
+
+        oKey.onclick = function () {
+            if (bKey){
+                oKeyImg.style.display = 'none';
+                oKey.innerHTML = '答案';
+            }else {
+                oKeyImg.style.display = 'block';
+                oKey.innerHTML = '隐藏';
+            }
+            bKey = !bKey;
+        }
+
 
     })();
 };

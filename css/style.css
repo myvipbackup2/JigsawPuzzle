@@ -22,13 +22,30 @@ body{
     height: 100px;
 }
 
-#btn {
+#btn,#key {
     position: absolute;
     bottom: -50px;
     width: 60px;
     height: 30px;
-    left: 50%;
     margin-left: -30px;
+}
+
+#btn{
+    left: 30%;
+}
+
+#key{
+    left: 70%;
+}
+
+#keyImg{
+    width: 150px;
+    height: 150px;
+    position: absolute;
+    right: 200px;
+    top: 10px;
+    left: 10px;
+    display: none;
 }
 
 h2{
