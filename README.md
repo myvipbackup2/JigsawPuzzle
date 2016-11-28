@@ -1,6 +1,6 @@
 # JigsawPuzzle
 ###一个拼图小DEMO
-
-<iframe height=664 width=585 src="https://github.com/myvipbackup2/JigsawPuzzle/blob/master/test.gif?raw=true">
+#####以下是演示
+![拼图演示](./test.gif)
 
 
